@@ -1,9 +1,73 @@
-/*Some necessary adjustments*/
-h1, body, html, main {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
 }
-/*Import the font and set the default size*/
-html {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px
+
+h1 {
+  font-weight: 300;
+  font-size: 78px;
+}
+
+h2 {
+  font-weight: 400;
+  color: rgb(75, 75, 75);
+  font-size: 30px;
+}
+
+p,
+li {
+  font-size: 18px;
+  color: rgb(75, 75, 75);
+}
+
+p {
+  text-align: left;
+}
+
+section,
+hr {
+  width: 780px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  height: 72px;
+}
+
+#cooking-info > ul {
+  list-style: none;
+}
+
+#cooking-info ul li:before {
+  content: '-';
+  margin: 0 8px;
+}
+
+#recipe-directions > ol {
+  list-style-type: none;
+}
+
+#recipe-directions li:before {
+  content: counter(section, number) ') ';
+}
+
+#recipe-directions li {
+  counter-increment: section;
+}
+
+.header {
+  background-image: url(../images/soup.jpg);
+  background-color: transparent;
+  background-size: auto 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  color: white;
 }
